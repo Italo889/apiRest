@@ -55,8 +55,8 @@ class FuncionariosDAO {
     });
   }
 
-  updateFuncionario(nome, email, cargo, endereco, cpf, idade, telefone) {
-    if (nome || email || cargo || endereco || cpf || idade || telefone) {
+  updateFuncionario(id, nome, email, cargo, endereco, cpf, idade, telefone) {
+    if (id || nome || email || cargo || endereco || cpf || idade || telefone) {
       let virgula = false
       let newArray = []
       let sql = 'UPDATE FUNCIONARIOS SET '

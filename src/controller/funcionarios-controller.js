@@ -49,7 +49,6 @@ module.exports = (app, db) => {
             telefone
         } = req.body;
 
-        console.log(nome)
         let newFuncionario = new Funcionarios(nome, email, cargo, endereco, cpf, idade, telefone);
         try {
             await funcionariosBD.insertFuncionario(newFuncionario);
@@ -85,7 +84,7 @@ module.exports = (app, db) => {
         }
     });
 
-    app.put("/funcionario/:id", async (req, res) => {
+    app.put("/funcionarios/:id", async (req, res) => {
         const {
             nome,
             email,
